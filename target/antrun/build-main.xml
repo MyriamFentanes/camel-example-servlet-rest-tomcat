@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="Decompress archive"/>
+  <gunzip src="/Users/mfentane/Documents/products/fuse/jboss-fuse-6.2.0.redhat-133/extras/apache-camel-2.15.1.redhat-620133/examples/camel-example-servlet-rest-tomcat/target/swagger-ui-2.0.24.tar.gz"/>
+  <untar src="/Users/mfentane/Documents/products/fuse/jboss-fuse-6.2.0.redhat-133/extras/apache-camel-2.15.1.redhat-620133/examples/camel-example-servlet-rest-tomcat/target/swagger-ui-2.0.24.tar" dest="/Users/mfentane/Documents/products/fuse/jboss-fuse-6.2.0.redhat-133/extras/apache-camel-2.15.1.redhat-620133/examples/camel-example-servlet-rest-tomcat/target"/>
+  <echo message="moving resources"/>
+  <move todir="target/swagger-ui" overwrite="yes">
+    <fileset dir="/Users/mfentane/Documents/products/fuse/jboss-fuse-6.2.0.redhat-133/extras/apache-camel-2.15.1.redhat-620133/examples/camel-example-servlet-rest-tomcat/target/swagger-ui-2.0.24/dist"/>
+  </move>
+</target>
+</project>
